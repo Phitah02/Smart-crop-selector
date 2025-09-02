@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-layout">
+            <div class="left-panel">
+                <header class="header">
+                    <h1>Smart Crop Selector</h1>
+                </header>
+                <form id="cropForm">
+                    <div class="form-group">
+                        <label for="soil_type"><img src="https://img.icons8.com/color/48/000000/soil.png" class="icon"> Soil Type:</label>
+                        <select id="soil_type" name="soil_type" required>
+                            <option value="">Select...</option>
+                            <option value="sandy">Sandy</option>
+                            <option value="loamy">Loamy</option>
+                            <option value="clay">Clay</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rainfall_level"><img src="https://img.icons8.com/color/48/000000/rain.png" class="icon"> Rainfall Level:</label>
+                        <select id="rainfall_level" name="rainfall_level" required>
+                            <option value="">Select...</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="region"><img src="https://img.icons8.com/color/48/000000/region-code.png" class="icon"> Region:</label>
+                        <input type="text" id="region" name="region" placeholder="e.g., Kenya" required>
+                    </div>
+                    <button type="submit" class="colorful-btn"><img src="https://img.icons8.com/color/24/000000/idea.png" class="icon"> Get Recommendations</button>
+                </form>
+                <div id="results"></div>
+                <div class="premium-section">
+                    <h2><img src="https://img.icons8.com/color/48/000000/crown.png" class="icon"> Upgrade to Premium</h2>
+                    <p>Get detailed analytics and crop plans for only <b>KES 5</b>!</p>
+                    <input type="email" id="premiumEmail" placeholder="Enter your email" required />
+                    <button id="payPremiumBtn" class="colorful-btn"><img src="https://img.icons8.com/color/24/000000/secured-letter.png" class="icon"> Pay with IntaSend</button>
+                    <div id="paymentStatus"></div>
+                    <span style="display:block; text-align: center">
+                        <a href="https://intasend.com/security" target="_blank">
+                            <img src="https://intasend-prod-static.s3.amazonaws.com/img/trust-badges/intasend-trust-badge-no-mpesa-hr-dark.png" width="375px" alt="IntaSend Secure Payments (PCI-DSS Compliant)">
+                        </a>
+                        <strong>
+                            <a style="display: block; color: #fafafa; text-decoration: none; font-size: 0.8em; margin-top: 0.6em;" href="https://intasend.com/security" target="_blank">Secured by IntaSend Payments</a>
+                        </strong>
+                    </span>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="description-box">
+                    <h2>What is Smart Crop Selector?</h2>
+                    <p>
+                        Smart Crop Selector is an AI-powered tool that helps farmers and agricultural enthusiasts choose the best crops for their land. By analyzing soil type, rainfall, and region, it provides personalized crop recommendations to maximize yield and sustainability.<br><br>
+                        <b>Empowering farmers for a sustainable future.</b>
+                    </p>
+                    <img src="../assets/images/pexels-kelly-2382665.jpg" alt="Farm landscape" class="desc-img">
+                    <!-- Feedback/Comment Section -->
+                    <div class="feedback-section">
+                        <h2>Feedback & Comments</h2>
+                        <form id="feedbackForm">
+                            <input type="text" id="fbName" placeholder="Your Name" required><br>
+                            <input type="email" id="fbEmail" placeholder="Your Email" required><br>
+                            <textarea id="fbComment" placeholder="Your feedback or comment..." rows="4" required></textarea><br>
+                            <button type="submit" class="colorful-btn">Submit Feedback</button>
+                        </form>
+                        <div id="feedbackMsg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <img src="https://img.icons8.com/color/48/000000/earth-planet.png" class="icon"> <span>Empowering farmers for a sustainable future</span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>

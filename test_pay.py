@@ -1,0 +1,13 @@
+import requests
+
+url = "http://127.0.0.1:5000/pay"
+payload = {
+    "email": "test@example.com"
+}
+headers = {
+    "Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+print("Status Code:", response.status_code)
+print("Response Body:", response.text)
